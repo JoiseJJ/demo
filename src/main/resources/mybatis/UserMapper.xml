@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.deploydemo.mapper.UserMapper">
+ 
+  <select id="findUserInfo" resultType="com.deploydemo.model.User">
+    select login_name, display_name from ad_user WHERE create_date is not null order by create_date
+  </select>
+ 
+</mapper>
